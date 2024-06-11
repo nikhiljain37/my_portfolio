@@ -21,7 +21,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="mt-6 top-0 fixed w-full z-[3] border-b-2 sm:border-b-0">
+    <nav className="pt-6 h-20 top-0 fixed w-full z-50 border-b-2 sm:border-b-0 bg-background dark:bg-zinc-950">
       <div className="w-full sm:w-4/5 md:w-3/5 mx-auto flex flex-row sm:flex-row justify-between h-20 sm:h-auto items-center px-4">
         <div className="flex sm:flex-nowrap sm:max-xl:space-x-2 md:space-x-7 space-x-1 mr-1 mb-4 sm:mb-0">
           {navItems.map((item) => {
@@ -36,7 +36,7 @@ const Navigation = () => {
                       : ""
                   }`}
               >
-                <Link href={item.url} key={item.label}>
+                <Link href={item.url} key={item.label} target="_blank">
                   <div className="flex items-center space-x-1 sm:max-[1200px]:space-x-2 md:min-[1190px]:space-x-3">
                     <Image
                       src={item.icon}
@@ -54,7 +54,7 @@ const Navigation = () => {
             );
           })}
         </div>
-        <div className="mx-2">
+        <div className="mx-2 pb-4">
           <ModeToggle />
         </div>
       </div>
