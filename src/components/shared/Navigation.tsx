@@ -36,7 +36,7 @@ const Navigation = () => {
                       : ""
                   }`}
               >
-                <Link href={item.url} key={item.label} target="_blank">
+                <Link href={item.url} key={item.label}>
                   <div className="flex items-center space-x-1 sm:max-[1200px]:space-x-2 md:min-[1190px]:space-x-3">
                     <Image
                       src={item.icon}
